@@ -1,0 +1,28 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+/sp
+/sp.exe
+
+# Test binary, built with `go test -c`
+*.test
+
+# Coverage output
+*.out
+
+# Go workspace
+go.work
+go.work.sum
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*~
+
+# OS junk
+.DS_Store
+Thumbs.db
