@@ -21,7 +21,7 @@ func NewModel() Model {
 		macros: []macro.Macro{
 			{
 				Name:        "moovment",
-				Description: "Open Moovment workspace en start Claude Code",
+				Description: "Open Moovment workspace and start Claude Code",
 				Steps: []macro.Step{
 					{Type: macro.StepCD, Value: `C:\Users\Noud\Documents\Zzp\Moovment`, Platform: macro.PlatformWindows},
 					{Type: macro.StepRun, Value: "claude", Platform: macro.PlatformAll},
@@ -83,7 +83,7 @@ func (m Model) View() string {
 			list += "  " + line + "\n"
 		}
 	}
-	left := pane.Width(leftW).Height(bodyH).Render(title.Render("Macro's") + "\n\n" + list)
+	left := pane.Width(leftW).Height(bodyH).Render(title.Render("Macros") + "\n\n" + list)
 
 	var preview string
 	if len(m.macros) > 0 {
@@ -95,7 +95,7 @@ func (m Model) View() string {
 	}
 	right := pane.Width(rightW).Height(bodyH).Render(title.Render("Preview") + "\n\n" + preview)
 
-	help := dim.Render("j/k navigeren  •  g/G top/bottom  •  n nieuw  •  e edit  •  d delete  •  q afsluiten")
+	help := dim.Render("j/k navigate  •  g/G top/bottom  •  n new  •  e edit  •  d delete  •  q quit")
 
 	return lipgloss.JoinVertical(lipgloss.Left,
 		lipgloss.JoinHorizontal(lipgloss.Top, left, right),

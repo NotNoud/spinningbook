@@ -11,7 +11,7 @@ import (
 
 func main() {
 	if len(os.Args) > 1 {
-		fmt.Fprintln(os.Stderr, "subcommands komen later (run/list/init)")
+		fmt.Fprintln(os.Stderr, "subcommands not implemented yet (run/list/init)")
 		os.Exit(1)
 	}
 
